@@ -1,0 +1,68 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: url(landing\ page\ img.jpeg) no-repeat center center fixed;
+  background-size: cover; /* Ensures the image covers the entire viewport */
+}
+
+/* Apply border-radius and box-shadow to the grid and buttons */
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  border-radius: 15px; /* Rounded corners for the grid */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for the grid */
+  padding: 10px; /* Optional padding inside the grid */
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(217, 190, 190, 0.75);
+  border-radius: 8px; /* Rounded corners for buttons */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Shadow for buttons */
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, .9);
+} 
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px; /* Rounded corners for the output */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for the output */
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
